@@ -1,0 +1,16 @@
+# ------------------------------
+# 適当にuserを作る
+# ------------------------------
+
+---
+- hosts: all
+  sudo: true
+  user: ansible
+
+
+  tasks:
+    - name: add group
+      group:
+       name: unix
+       state: absent
+
